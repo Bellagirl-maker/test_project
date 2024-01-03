@@ -11,29 +11,27 @@ body {
 }
 
 section { 
-    padding: 5%; 
-    padding-top: 0; 
-    height: 100vh; 
+    padding-left: 20%; 
+    height: 100vh;
+    margin: 0 auto; 
 } 
 
 h1 { 
     font-weight: 700;
     padding-top: 20px; 
     padding-bottom: 10px; 
-    text-align: center;    
 } 
 
 hr {
     width: 50%;
-    height: 0.5px; /* Adjust the thickness of the <hr> */
-    background-color: #808080;
-    margin: 0 auto;
-
+    height: 0.01px; 
+    background-color: #ecebeb;   
 }
 
 p {
     padding-top: 20px; 
-    padding-bottom: 20px; 
+    padding-bottom: 20px;
+    display: inline-block; 
 }
 
 textarea {
