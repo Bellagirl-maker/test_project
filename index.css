@@ -16,7 +16,7 @@ section {
     margin: 0 auto;
 }
 
-h1 {
+h1.heading {
     font-weight: 700;
     padding-top: 20px;
     padding-bottom: 10px;
@@ -28,7 +28,7 @@ hr {
     background-color: #ecebeb;
 }
 
-p {
+p.instructions {
     padding-top: 20px;
     padding-bottom: 20px;
     display: inline-block;
@@ -40,3 +40,18 @@ textarea {
     outline: none;
     border: none;
 }
+
+#editor {
+    border: 1px solid #ccc;
+    padding-bottom: 2rem;
+    position: relative;
+    border: none;
+  }
+
+  #textInput {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    border: none;
+    outline: none;
+  }
