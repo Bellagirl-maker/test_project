@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="index.css" />
 </head>
 <body>
-    <section class="page">
+    <section>
         <h1>Front-end developer test project</h1>
         <hr />
         <p>Your goal is to make a page that looks exactly like this one, and has the ability
@@ -15,9 +15,15 @@
         <br>
         <div class="textarea">
             <textarea id="textarea1"
-                class="input shadow"
                 name="name"
-                placeholder=""></textarea>
+                placeholder="Type / for blocks @ to link docs or people"></textarea>
+            <div id="popup">
+                    <ul>
+                        <li onclick="">Add blocks</li>
+                        <li onclick="">Heading 1</li>
+                        <li onclick="">Expandable Heading 1</li>
+                    </ul>
+            </div>
         </div>
     </section>
     <script src="index.js"></script>
