@@ -13,15 +13,18 @@
         <p class="instructions">Your goal is to make a page that looks exactly like this one, and has the ability
             to create H1 text simply by <br> typing / then 1, then typing text and hitting enter.</p>
         <br>
-        <!-- <div class="textarea">
-            <textarea id="textarea1"
-                class="input shadow"
-                name="name"
-                placeholder=""></textarea>
-        </div> -->
         <div id="editor">
             <input type="text" id="textInput" placeholder="Type / for blocks, @ to link docs or people">
+            <div id="popup">
+                <ul>
+                    <li id="addBlocks">Add blocks</li>
+                    <li id="heading1">Heading 1</li>
+                    <li id="expandableHeading1">Expandable Heading 1</li>
+                </ul>
+            </div>
+      
         </div>
+        
     </section>
     <script src="index.js"></script>
 </body>
