@@ -1,28 +1,3 @@
-
-        // document.getElementById('textarea1').addEventListener('keydown', function(event) {
-        //     if (event.key === '/' && event.ctrlKey) {
-        //         createH1();
-        //     }
-        // });
-
-        // function createH1() {
-        //     var textarea = document.getElementById('textarea1');
-        //     var text = textarea.value;
-
-        //     // Extract text after '/1 ' (excluding the '/1 ')
-        //     var newText = text.substring(text.indexOf('/1 ') + 3);
-
-        //     // Create H1 element
-        //     var h1Element = document.createElement('h1');
-        //     h1Element.textContent = newText;
-
-        //     // Append H1 element to the page
-        //     document.body.appendChild(h1Element);
-
-        //     // Clear textarea
-        //     textarea.value = '';
-        // }
-
 const editor = document.getElementById('editor');
 const textInput = document.getElementById('textInput');
 
@@ -45,6 +20,52 @@ textInput.addEventListener('keyup', function(event) {
     // Clear the input
     textInput.value = '';
     }
+});
+
+textInput.addEventListener('input', function (event) {
+    // Get the text content of the input
+    const text = event.target.value;
+
+    // Check if the text contains "/1" anywhere
+    if (text.includes('/1')) {
+    
+        // Display the popup
+        document.getElementById('popup').style.display = 'block';
+    } else {
+
+        // Hide the popup
+       document.getElementById('popup').style.display = 'none';
+    }
+});
+
+document.getElementById('editor').addEventListener('input', function (event) {
+    const text = event.target.value;
+
+    // Check if the text contains "/1" anywhere
+    if (text.includes('/1')) {
+        document.getElementById('popup').style.display = 'block';
+    } else {
+        document.getElementById('popup').style.display = 'none';
+    }
+});
+
+document.getElementById('addBlocks').addEventListener('click', function () {
+    // Add logic for "Add blocks" option
+    document.getElementById('editor').value += '\n<!-- Add your block elements here -->';
+    document.getElementById('popup').style.display = 'none'; // Hide the popup after action
+});
+
+document.getElementById('heading1').addEventListener('click', function () {
+    // Add logic for "Heading 1" option
+    document.getElementById('editor').value += '\n# Heading 1';
+    document.getElementById('popup').style.display = 'none'; // Hide the popup after action
+    
+});
+
+document.getElementById('expandableHeading1').addEventListener('click', function () {
+    // Add logic for "Expandable Heading 1" option
+    document.getElementById('editor').value += '\n<details>\n<summary><h1>Expandable Heading 1</h1></summary>\n<!-- Add your content here -->\n</details>';
+    document.getElementById('popup').style.display = 'none'; // Hide the popup after action
 });
 
     
